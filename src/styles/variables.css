@@ -1,0 +1,14 @@
+:root {
+    --color-background: #0D0D0D; /* Fundo principal */
+    --color-secondary: #2B2B2B; /* Fundo secundário */
+    --color-highlight: #005F73; /* Destaques */
+    --color-accent: #94D2BD; /* Pequenos detalhes*/
+    --color-premium: #E9D8A6; /* Detalhes metálicos*/
+    
+    --color-text-primary: #FFFFFF; /* Texto principal */
+    --color-text-secondary: #A5A5A5; /* Texto secundário */
+
+    /* Cor para sombra e bordas */
+    --shadow-soft: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    --border-radius: 8px;
+}
