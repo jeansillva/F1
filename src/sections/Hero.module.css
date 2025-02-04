@@ -1,0 +1,78 @@
+@import url(../styles/variables.css);
+
+.hero {
+    position: relative;
+    background-color: var(--color-background);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    color: var(--color-text-primary);
+}
+
+.heroContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroTitle{
+    margin: 10rem 3rem 1rem 1.5rem;
+    font-weight: bold;
+}
+
+.heroSubtitle{
+    font-size: 1.2rem;
+    margin: 1rem 3rem 1rem 1.5rem;
+}
+
+.heroChevrons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.chevromCar {
+    width: 2.8125rem;
+    height: 2.8125rem;
+}
+
+.chevromDown{
+    width: 25px;
+    height: 20px;
+
+}
+
+.heroImagesContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.wallpaper_img {
+    position: absolute;
+    bottom: 0px;
+    
+    width: 19rem;
+    height: 19rem;
+    
+    border-radius: 1300px 1300px 0 0;
+    object-fit: none;
+    object-position: top;
+}
+
+.overlay_img{
+    position: absolute;
+    bottom: 2.8rem;
+
+    width: 285px;
+    height: 180px;
+
+    left: 40%; 
+    transform: translateX(-50%);
+}
+
+.heroChevrons.moveDown {
+    transform: translateY(2.4rem);
+}

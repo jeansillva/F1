@@ -1,0 +1,19 @@
+@import url(../styles/variables.css);
+
+.about{
+    background-color: var(--color-secondary);
+    background-size: cover;
+    height: 100%;
+}
+
+.about h1{   
+    color: var(--color-text-primary);
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 2rem;
+    margin: 0 0 1rem 0;
+}
+
+.about p{
+    color: var(--color-text-primary);
+}

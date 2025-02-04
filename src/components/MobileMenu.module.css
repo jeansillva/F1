@@ -8,22 +8,20 @@
     background-color: var(--color-background);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     border-radius: 0 0 15px 15px;
-    pointer-events: none;
-
-    opacity: 0;
-    max-height: 0;
     overflow: hidden;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
+    transition: max-height 0.5s ease;
+    max-height: 0;
 }
 
 .menuLinks_open {
-    pointer-events: auto;
-    opacity: 1;
     max-height: 500px;
+    pointer-events: auto;
+    z-index: 1;
 }
 
 .menuLinks ul {
     list-style: none;
+    padding: 0px;
 }
 
 .menuLinks li {
