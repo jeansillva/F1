@@ -17,8 +17,12 @@ const Sobre = () => {
         <h1>Sobre a Fórmula 1</h1>
 
         <p>Uma competição de automobilismo de alta velocidade, onde os melhores pilotos e equipes do mundo enfrentam desafios em pistas ao redor do globo, combinando velocidade, habilidade e inovação tecnológica.</p>
-      </Container>
 
+        <h2>Confira grandes feitos:</h2>
+      </Container>
+      
+      
+    
       <Card imageUrl={f1Car}
         altText='CardWallpaper'
         paragraphText='Velocidade máxima: 372,5 km/h'

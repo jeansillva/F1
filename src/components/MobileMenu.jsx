@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import styles from './MobileMenu.module.css';
 import menuIcon from '../assets/icons/menu.svg';
 import votingIcon from '../assets/icons/voting.png';
@@ -8,6 +10,10 @@ const MobileMenu = () => {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   const links = ['Pistas', 'Pilotos', 'Equipes', 'Vote na sua Equipe'];
@@ -22,10 +28,12 @@ const MobileMenu = () => {
         <ul>
           {links.map((link, index) => (
             <li key={link}>
-              <a href={`#${link.toLowerCase()}`} className={styles.menuLink}>
+              <Link to={`/${link.toLowerCase().replace(/\s+/g, '-')}`} className={styles.menuLink} onClick={closeMenu}>
                 {link}
-                {index === links.length - 1 && (<img src={votingIcon} alt="Voting Icon" className={styles.votingIcon} />)} {/* Código para adicionar o incone apenas ao ultimo elemento */}
-              </a>
+                {index === links.length - 1 && (
+                  <img src={votingIcon} alt="Voting Icon" className={styles.votingIcon} />
+                )}
+              </Link>
             </li>
           ))}
         </ul>

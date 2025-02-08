@@ -1,11 +1,11 @@
 @import url('../styles/variables.css');
 
 .card {
-    border-top: 3px solid var(--color-premium);
+    /* border-top: 3px solid var(--color-premium);
     border-right: 0px;
     border-bottom: 3px solid var(--color-premium);
-    border-left: 3px solid var(--color-premium);
-    border-radius: 8px 0px 0px 8px;
+    border-left: 3px solid var(--color-premium); */
+    /* border-radius: 8px 0px 0px 8px; */
 
     text-align: center;
     display: flex;
@@ -14,7 +14,9 @@
 
     position: relative;
     margin-top: 1.4rem;
-    height: calc(80% - 2rem);
+    height: 220px;
+
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.8), 0 6px 20px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao card */
 }
 
 .cardImageContainer {
@@ -30,12 +32,10 @@
 }
 
 .cardText {
-
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.7); 
     padding: 10px;
-    border-radius: 0 0 8px 8px;
 }

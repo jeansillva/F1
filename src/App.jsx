@@ -1,15 +1,31 @@
-import Hero from './sections/Hero'
-import Navbar from './components/Navbar'
-import Sobre from './sections/Sobre'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import Navbar from './components/Navbar';
+import Hero from './sections/Hero';
+import Sobre from './sections/Sobre';
+
+import VoteNaSuaEquipe from './pages/VoteNaSuaEquipe';
+import Pistas from './pages/Pistas';
 
 const App = () => {
 
   return (
-    <main>     
+    <Router>
       <Navbar />
-      <Hero/>
-      <Sobre/>
-    </main>
+      <Routes>
+        <Route path="/" element={
+          <>
+          <Hero />
+          <Sobre />
+          </>
+        }/>
+
+        <Route path="/pistas" element={<Pistas />} />
+        {/* <Route path="/pilotos" element={<Pilotos />} />
+        <Route path="/equipes" element={<Equipes />} /> */}
+        <Route path="/vote-na-sua-equipe" element={<VoteNaSuaEquipe />} />
+      </Routes>
+    </Router>
   )
 }
 

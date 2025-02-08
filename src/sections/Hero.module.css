@@ -20,6 +20,7 @@
 .heroTitle{
     margin: 10rem 3rem 1rem 1.5rem;
     font-weight: bold;
+    font-size: clamp(2rem, calc(5vw + 1rem), 3rem);
 }
 
 .heroSubtitle{
@@ -40,9 +41,8 @@
 }
 
 .chevromDown{
-    width: 25px;
-    height: 20px;
-
+    width: 1.5625rem;
+    height: 1.25rem;
 }
 
 .heroImagesContainer{
