@@ -20,8 +20,6 @@ const Sobre = () => {
 
         <h2>Confira grandes feitos:</h2>
       </Container>
-      
-      
     
       <Card imageUrl={f1Car}
         altText='CardWallpaper'
