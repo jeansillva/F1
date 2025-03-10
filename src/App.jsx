@@ -16,14 +16,14 @@ const App = () => {
       <Routes>
         <Route path="/" element={
           <>
-          <Hero />
-          <Sobre />
+            <Hero />
+            <Sobre />
           </>
-        }/>
+        } />
 
         <Route path="/pistas" element={<Pistas />} />
         <Route path="/pilotos" element={<Pilotos />} />
-        {/*<Route path="/equipes" element={<Equipes />} /> */}
+        {/* <Route path="/equipes" element={<Equipes />} />  */}
         <Route path="/vote-na-sua-equipe" element={<VoteNaSuaEquipe />} />
       </Routes>
     </Router>

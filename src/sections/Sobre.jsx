@@ -7,8 +7,6 @@ import f1Car from '../assets/images/F1Car.jpg'
 import hamilton from '../assets/images/Hamilton.jpg'
 import pit from '../assets/images/PitRedbull.jpg'
 
-
-
 const Sobre = () => {
   return (
     <section className={styles.about} id="sobre">

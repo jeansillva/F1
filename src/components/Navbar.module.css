@@ -20,12 +20,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
 }
 
+.nav_link {
+    color: var(--color-text-primary);
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+}
+
+.votingIcon {
+    margin-left: 10px;
+    width: 20px; 
+    height: 20px; 
+    filter: invert(1);
+}
+
+
 @media (max-width: 768px) {
-    .nav_links,
-    .nav_voting {
+    .nav_links {
         display: none;
     }
 }

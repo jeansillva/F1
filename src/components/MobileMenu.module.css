@@ -52,6 +52,7 @@
     cursor: pointer;
     padding: 10px;
     filter: invert(1);
+    margin: 0;
 }
 
 .votingIcon {
@@ -59,4 +60,10 @@
     width: 20px; 
     height: 20px; 
     filter: invert(1);
+}
+
+@media (min-width: 769px) {
+    .menuButton {
+        display: none;
+    }
 }
