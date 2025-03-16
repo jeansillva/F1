@@ -62,7 +62,7 @@
     filter: invert(1);
 }
 
-@media (min-width: 769px) {
+@media (min-width: 916px) {
     .menuButton {
         display: none;
     }

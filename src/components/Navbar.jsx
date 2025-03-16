@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom';
 import formula1logo from '../assets/icons/formula1logo.png';
 import votingIcon from '../assets/icons/voting.png';
+import { useVote } from '../context/VoteContext';
 
 import styles from './Navbar.module.css';
 import MobileMenu from './MobileMenu';
 
 const Navbar = () => {
+  const { favoriteTeam } = useVote();
+
   const links = [
     { name: 'Home', path: '/' },
     { name: 'Pilotos', path: '/pilotos' },
@@ -27,6 +30,10 @@ const Navbar = () => {
               )}
             </Link>
           ))}
+        </div>
+
+        <div className={styles.favoriteTeam}>
+          Sua Equipe Favorita: {favoriteTeam}
         </div>
 
         <MobileMenu />

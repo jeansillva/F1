@@ -8,4 +8,13 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  server: {
+    proxy: {
+      '/api/drivers': {
+        target: 'https://api.openf1.org',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/drivers/, '/v1/drivers'),
+      },
+    },
+  },
 })

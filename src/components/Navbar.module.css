@@ -37,9 +37,26 @@
     filter: invert(1);
 }
 
+.favoriteTeam{
+    color: var(--color-text-primary);
+    font-size: 1rem; 
+    font-weight: bold; 
+    position: absolute; 
+    right: 1rem;
+    color: var(--color-text-primary);
+}
 
-@media (max-width: 768px) {
+
+@media (max-width: 916px) {
     .nav_links {
         display: none;
     }
+
+    .favoriteTeam{
+        position: static; 
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+
 }
