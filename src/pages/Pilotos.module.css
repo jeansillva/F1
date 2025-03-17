@@ -1,6 +1,6 @@
 @import '../styles/variables.css';
 
-section{
+section {
     background-color: var(--color-background);
 }
 
@@ -74,3 +74,16 @@ button:hover {
     background-color: var(--color-accent);
 }
 
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; 
+    background-color: var(--color-background); 
+}
+
+.loadingGif {
+    width: 120px;
+    height: 120px;
+}
