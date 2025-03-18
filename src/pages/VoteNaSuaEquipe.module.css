@@ -45,6 +45,10 @@
     transform: scale(1.05);
 }
 
+.teamName {
+    color: var(--color-accent);
+}
+
 input[type="radio"] {
     appearance: none;
     width: 18px;
