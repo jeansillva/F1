@@ -5,25 +5,28 @@ import styles from './Pilotos.module.css';
 import loadingGif from '../assets/grey_style.gif';
 
 const Pilotos = () => {
-  const { loading, setLoading } = useLoading(); 
+  const { loading, setLoading } = useLoading();
   const { data: allDrivers, loading: fetchLoading, error } = useFetch('https://api.openf1.org/v1/drivers');
   const [drivers, setDrivers] = useState([]);
   const [loadedCount, setLoadedCount] = useState(10);
 
+  // Vai iniciar ou parar o carregamento levando em conta o valor de fetchLoading (true ou false)
   useEffect(() => {
     if (fetchLoading) {
-      setLoading(true); 
+      setLoading(true);
     } else {
-      setLoading(false); 
+      setLoading(false);
     }
-  }, [fetchLoading, setLoading]); 
+  }, [fetchLoading, setLoading]);
 
+  // Vai atualizar a lista de pilotos quando allDrivers ou loadedCount mudam
   useEffect(() => {
     if (allDrivers) {
-      setDrivers(allDrivers.slice(0, loadedCount)); 
+      setDrivers(allDrivers.slice(0, loadedCount));
     }
   }, [allDrivers, loadedCount]);
 
+  // Função para carregar mais pilotos, limitando a 60 pilotos
   const loadMoreDrivers = () => {
     const newCount = loadedCount + 10;
     if (newCount <= 60) {
@@ -32,6 +35,7 @@ const Pilotos = () => {
     }
   };
 
+  // Responsável por exibir o gif de carregamento
   if (loading) {
     return (
       <div className={styles.loadingContainer}>

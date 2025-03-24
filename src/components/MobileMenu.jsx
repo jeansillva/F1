@@ -16,7 +16,12 @@ const MobileMenu = () => {
     setMenuOpen(false);
   };
 
-  const links = ['Pistas', 'Pilotos', 'Equipes', 'Vote na sua Equipe'];
+  const links = [
+    { name: 'Home', path: '/' },
+    { name: 'Pistas', path: '/pistas' },
+    { name: 'Pilotos', path: '/pilotos' },
+    { name: 'Vote na sua Equipe', path: '/vote-na-sua-equipe' }
+  ];
 
   return (
     <div>
@@ -27,9 +32,9 @@ const MobileMenu = () => {
       <div className={`${styles.menuLinks} ${menuOpen ? styles.menuLinks_open : ""}`}>
         <ul>
           {links.map((link, index) => (
-            <li key={link}>
-              <Link to={`/${link.toLowerCase().replace(/\s+/g, '-')}`} className={styles.menuLink} onClick={closeMenu}>
-                {link}
+            <li key={link.name}>
+              <Link to={link.path} className={styles.menuLink} onClick={closeMenu}>
+                {link.name}
                 {index === links.length - 1 && (
                   <img src={votingIcon} alt="Voting Icon" className={styles.votingIcon} />
                 )}

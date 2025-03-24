@@ -18,7 +18,7 @@ import austin from '../assets/images/Pistas/Austin.png';
 import zandvoort from '../assets/images/Pistas/Zandvoort.png';
 import redBullRing from '../assets/images/Pistas/RedBullRing.png';
 
-
+// Armazenamos as pistas em um array, junto de suas imagens
 const pistas = [
   { name: 'Austin', imageUrl: austin },
   { name: 'Bahrein', imageUrl: bahrein },
